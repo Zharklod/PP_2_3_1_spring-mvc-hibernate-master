@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Редактирование пользователя</title>
+</head>
+<body>
+
+<form th:method="PATCH" th:action="@{/{id}(id=${user.getId()})}" th:object="${user}">
+  <label for="name">Введите имя</label>
+  <input type="text" placeholder="Имя" th:field="*{name}" id="name">
+  <br/>
+  <label for="surName">Введите фамилию</label>
+  <input type="text" placeholder="Фамилия" th:field="*{surName}" id="surName">
+  <br/>
+  <label for="age">Введите возраст</label>
+  <input type="number" min="0" placeholder="Возраст" th:field="*{age}" id="age">
+  <br/>
+  <input type="submit" value="Обновить"/>
+</form>
+
+</body>
+</html>
