@@ -6,6 +6,7 @@
 </head>
 <body>
 <div
+    <p th:text="${headerMessage}"/>
 <th:block th:each="user : ${allUsers}">
     <span><h2 th:text="${user.getName()} + ' ' +
                        ${user.getSurName()} + ' ' +
